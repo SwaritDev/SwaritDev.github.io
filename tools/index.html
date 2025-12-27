@@ -1,139 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML-Only Enterprise Portal</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Dark UI</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #0f0f14, #0b0b0f, #111122);
+  background-size: 300% 300%;
+  animation: bgMove 12s ease infinite;
+  color: #eaeaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* CARD GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* CARD GLOW */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* CARD CONTENT */
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.6);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <center>
-            <h1>GLOBAL TECH SOLUTIONS</h1>
-            <p><i>Reliability. Scalability. Simplicity.</i></p>
-            <hr width="80%">
-        </center>
-    </header>
+<div class="container">
+  <header>
+    <h1>Dark Modern Interface</h1>
+    <p>Pure HTML + CSS • No JavaScript</p>
+  </header>
 
-    <table border="1" width="100%" cellpadding="10" cellspacing="0">
-        <tr>
-            <td width="20%" valign="top" bgcolor="#f0f0f0">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#dashboard">Executive Dashboard</a></li>
-                    <li><a href="#database">Employee Directory</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#contact">Support Request</a></li>
-                    <li><a href="https://google.com" target="_blank">External Search</a></li>
-                </ul>
-                <hr>
-                <h4>System Status</h4>
-                <p>Uptime: <b>99.9%</b></p>
-                <p>Server: <b>Node-04</b></p>
-            </td>
+  <section class="cards">
+    <div class="card">
+      <h2>Fast</h2>
+      <p>Lightweight and performant with zero JavaScript overhead.</p>
+      <a class="btn" href="#">Explore</a>
+    </div>
 
-            <td width="80%" valign="top">
-                
-                <h2 id="dashboard">Executive Dashboard</h2>
-                <p>Welcome back, Administrator. Here is the summary for the current fiscal quarter.</p>
-                
-                <table border="1" width="100%">
-                    <tr bgcolor="#cccccc">
-                        <th>Region</th>
-                        <th>Projected Growth</th>
-                        <th>Status</th>
-                    </tr>
-                    <tr>
-                        <td>North America</td>
-                        <td>+12.5%</td>
-                        <td><font color="green">Stable</font></td>
-                    </tr>
-                    <tr>
-                        <td>EMEA</td>
-                        <td>-2.1%</td>
-                        <td><font color="red">Review Needed</font></td>
-                    </tr>
-                </table>
+    <div class="card">
+      <h2>Dynamic</h2>
+      <p>Smooth animations and hover effects using pure CSS.</p>
+      <a class="btn" href="#">Discover</a>
+    </div>
 
-                <hr>
+    <div class="card">
+      <h2>Modern</h2>
+      <p>Glassmorphism and gradient effects with a dark aesthetic.</p>
+      <a class="btn" href="#">View More</a>
+    </div>
+  </section>
 
-                <h2 id="database">Employee Directory</h2>
-                <p>Below is the current internal roster organized by department.</p>
-                <details>
-                    <summary><b>Click to Expand: Engineering Team</b></summary>
-                    <ol>
-                        <li>Jane Doe - Lead Architect</li>
-                        <li>John Smith - Systems Analyst</li>
-                        <li>Alice Wong - QA Engineer</li>
-                    </ol>
-                </details>
-                <br>
-                <details>
-                    <summary><b>Click to Expand: Marketing Team</b></summary>
-                    <ul>
-                        <li>Sarah Jenkins - Brand Manager</li>
-                        <li>Robert Tables - SEO Specialist</li>
-                    </ul>
-                </details>
-
-                <hr>
-
-                <h2 id="services">Service Showcase</h2>
-                <p>Watch our corporate overview or view our infrastructure map:</p>
-                <table border="0">
-                    <tr>
-                        <td>
-                            <figure>
-                                <img src="https://via.placeholder.com/200" alt="Sample Infrastructure Map">
-                                <figcaption>Fig 1: Network Topology</figcaption>
-                            </figure>
-                        </td>
-                        <td>
-                            <blockquote>
-                                "The best way to predict the future is to invent it." <br>
-                                <i>- Corporate Motto</i>
-                            </blockquote>
-                        </td>
-                    </tr>
-                </table>
-
-                <hr>
-
-                <h2 id="contact">Support Request Form</h2>
-                <form action="/submit-form" method="post">
-                    <fieldset>
-                        <legend>Ticket Information</legend>
-                        <label for="name">Employee Name:</label><br>
-                        <input type="text" id="name" name="name" required><br><br>
-
-                        <label for="dept">Department:</label><br>
-                        <select id="dept" name="dept">
-                            <option value="it">IT</option>
-                            <option value="hr">HR</option>
-                            <option value="fin">Finance</option>
-                        </select><br><br>
-
-                        <label>Priority Level:</label><br>
-                        <input type="radio" id="low" name="priority" value="low">
-                        <label for="low">Low</label>
-                        <input type="radio" id="high" name="priority" value="high">
-                        <label for="high">High</label><br><br>
-
-                        <label for="msg">Issue Description:</label><br>
-                        <textarea id="msg" name="msg" rows="4" cols="40"></textarea><br><br>
-
-                        <input type="submit" value="Submit Ticket">
-                        <input type="reset" value="Clear Form">
-                    </fieldset>
-                </form>
-            </td>
-        </tr>
-    </table>
-
-    <footer>
-        <center>
-            <p>&copy; 2025 Global Tech Solutions | Built with 100% Pure HTML</p>
-        </center>
-    </footer>
+  <footer>
+    © 2025 • Dark UI Design
+  </footer>
+</div>
 
 </body>
 </html>
