@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-Only Enterprise Portal</title>
+</head>
+<body>
+
+    <header>
+        <center>
+            <h1>GLOBAL TECH SOLUTIONS</h1>
+            <p><i>Reliability. Scalability. Simplicity.</i></p>
+            <hr width="80%">
+        </center>
+    </header>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <td width="20%" valign="top" bgcolor="#f0f0f0">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#dashboard">Executive Dashboard</a></li>
+                    <li><a href="#database">Employee Directory</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Support Request</a></li>
+                    <li><a href="https://google.com" target="_blank">External Search</a></li>
+                </ul>
+                <hr>
+                <h4>System Status</h4>
+                <p>Uptime: <b>99.9%</b></p>
+                <p>Server: <b>Node-04</b></p>
+            </td>
+
+            <td width="80%" valign="top">
+                
+                <h2 id="dashboard">Executive Dashboard</h2>
+                <p>Welcome back, Administrator. Here is the summary for the current fiscal quarter.</p>
+                
+                <table border="1" width="100%">
+                    <tr bgcolor="#cccccc">
+                        <th>Region</th>
+                        <th>Projected Growth</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>North America</td>
+                        <td>+12.5%</td>
+                        <td><font color="green">Stable</font></td>
+                    </tr>
+                    <tr>
+                        <td>EMEA</td>
+                        <td>-2.1%</td>
+                        <td><font color="red">Review Needed</font></td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2 id="database">Employee Directory</h2>
+                <p>Below is the current internal roster organized by department.</p>
+                <details>
+                    <summary><b>Click to Expand: Engineering Team</b></summary>
+                    <ol>
+                        <li>Jane Doe - Lead Architect</li>
+                        <li>John Smith - Systems Analyst</li>
+                        <li>Alice Wong - QA Engineer</li>
+                    </ol>
+                </details>
+                <br>
+                <details>
+                    <summary><b>Click to Expand: Marketing Team</b></summary>
+                    <ul>
+                        <li>Sarah Jenkins - Brand Manager</li>
+                        <li>Robert Tables - SEO Specialist</li>
+                    </ul>
+                </details>
+
+                <hr>
+
+                <h2 id="services">Service Showcase</h2>
+                <p>Watch our corporate overview or view our infrastructure map:</p>
+                <table border="0">
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="https://via.placeholder.com/200" alt="Sample Infrastructure Map">
+                                <figcaption>Fig 1: Network Topology</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <blockquote>
+                                "The best way to predict the future is to invent it." <br>
+                                <i>- Corporate Motto</i>
+                            </blockquote>
+                        </td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2 id="contact">Support Request Form</h2>
+                <form action="/submit-form" method="post">
+                    <fieldset>
+                        <legend>Ticket Information</legend>
+                        <label for="name">Employee Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="dept">Department:</label><br>
+                        <select id="dept" name="dept">
+                            <option value="it">IT</option>
+                            <option value="hr">HR</option>
+                            <option value="fin">Finance</option>
+                        </select><br><br>
+
+                        <label>Priority Level:</label><br>
+                        <input type="radio" id="low" name="priority" value="low">
+                        <label for="low">Low</label>
+                        <input type="radio" id="high" name="priority" value="high">
+                        <label for="high">High</label><br><br>
+
+                        <label for="msg">Issue Description:</label><br>
+                        <textarea id="msg" name="msg" rows="4" cols="40"></textarea><br><br>
+
+                        <input type="submit" value="Submit Ticket">
+                        <input type="reset" value="Clear Form">
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        <center>
+            <p>&copy; 2025 Global Tech Solutions | Built with 100% Pure HTML</p>
+        </center>
+    </footer>
+
+</body>
+</html>
